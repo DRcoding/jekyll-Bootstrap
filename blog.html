@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>div main</title>
+<style>
+body{
+	margin:0px;   /* 使用reset，并非全局reset */
+	padding:0px;   /* body换成"*"便是全局reset  */
+	}
+#container{
+	height:1200px;
+    width:1800px;
+   		 	
+	}
+#left{
+	float:left;
+	width:20%;
+	height:100%;
+	margin:0px;
+	background:url(images/bg-ramp.jpg);
+	background-repeat:repeat-y;
+		
+	}
+#logo{
+	height:120px;
+	width:165px;
+	margin-top:32px;
+	margin-left:90px;
+	background-color:#c94663;
+	background-image:url(images/logo.jpg);	 
+   	background-repeat:no-repeat;
+	padding:1.75em 0.5em 1.75em 0.5em;
+	border-radius:0.4em;
+	text-align:center;
+	box-shadow:inset 0px 0px 0px 1px rgba(255,255,255,0.15), 0 0.025em 0.15em 0em rgba(0,0,0,0.25);
+		
+	}
+	#introduce{
+		height:150px;
+		width:170px;
+		margin-top:10px;
+		margin-left:90px;		
+		}	
+	#introduce p a{
+		text-decoration:none;
+		color:#1C1E26;		
+		
+		}	
+#content{
+	  height:100%;
+	  width:77%;
+	  margin:0px 50px 0px 0px;	
+	  float:right;
+	  background:#F7F7F7;
+	
+	}	
+</style>
+<script type="text/javascript">
+function hide(){
+	document.getElementById("display").style.display="inline"; //显示开始设置为隐藏的display按钮
+	document.getElementById("left").style.display="none"; //隐藏左边
+	document.getElementById("content").style.width="100%"; //改变右边content的width铺满窗口
+		}
+ function dis(){
+	 document.getElementById("left").style.display="inline";  //显示左边
+	 document.getElementById("content").style.width="77%";    //改变右边content的width属性
+	 document.getElementById("display").style.display="none"  //隐藏display按钮，使得两次点击看似是同一个按钮
+	 
+	 }
+</script>
+</head>
+<body>
+<div id="container">
+<div id="left">
+   <div id="logo"><!--logo 熏--></div>
+   <div id="introduce">
+    <header>
+    <p><a  href="about.html" onmousemove="this.style.color='#C96'" onmouseout="this.style.color=''">july（关于我）</a></p>
+    <p>江西师范大学</p>
+    <p>软件工程</p>
+    </header>
+   </div>
+   
+</div>
+  <div id="content">
+ <input type="image" src="images/hidden.jpg" id="hidden" onclick="hide()" >
+ <input type="image" src="images/hidden.jpg" name="dispaly" id="display" style="display:none;"  onclick="dis()">  <!-- 暂时隐藏--> 
+  &nbsp;
+ <input type="image" src="images/pre.jpg" name="pre"> 
+ <hr>
+ 
+
+   </div>
+</div>     
+</body>
+</html>
